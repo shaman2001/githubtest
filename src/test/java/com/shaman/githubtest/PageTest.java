@@ -30,6 +30,7 @@ public class PageTest {
 	public final static String USERNAME = "shaman2001";
 	public final static String PASSWORD = "qwerty123";
 	public final static String URL="https://github.com/login";
+	//public final static String CHROMEDRIVER_EXE_PATH="c:\\selenium\\chromedriver.exe";
 
 	protected static String gridHubUrl;
 	protected static String baseUrl;
@@ -47,6 +48,7 @@ public class PageTest {
 		//chrome = DesiredCapabilities.chrome();
 		//WebDriverFactory.setMode(WebDriverFactoryMode.SINGLETON);
 		//driver = WebDriverFactory.getDriver(DesiredCapabilities.chrome());
+		//System.setProperty("webdriver.chrome.driver", CHROMEDRIVER_EXE_PATH);
 		driver=new ChromeDriver();
 		driver.get(URL);
 		homePage = new LoginPage(driver).login(USERNAME, PASSWORD);
@@ -55,6 +57,6 @@ public class PageTest {
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		//WebDriverFactory.dismissAll();
-		driver.close();
+		driver.quit();
 	}
 }
