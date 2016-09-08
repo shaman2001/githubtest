@@ -39,7 +39,7 @@ public class ProjectPage extends Page {
 	@FindBy(xpath = ".//span[text()='Clone or download']")
 	private WebElement btnClone;
 	
-	@FindBy(xpath = ".//h4[@class='mb-1']")
+	@FindBy(xpath = ".//h4[@class='mb-1'][2]")
 	private WebElement lblCloneMenuWnd;
 
 	@FindBy(how = How.TAG_NAME, using = "h1")
@@ -87,8 +87,21 @@ public class ProjectPage extends Page {
 	public String getCloneWndTitle() {
 		btnClone.click();
 		
-		String str = this.lblCloneMenuWnd.();
+		String str = this.lblCloneMenuWnd.getText();
 		//lblReadmeContent.click();
 		return str;
+	}
+	
+	public String getBranchesPageTitle() {
+		lnkBranches.click();
+		
+		(new WebDriverWait(super.webDrv,10)).until (new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver d) {
+				return d.getTitle().startsWith("Branches");
+			}
+		});
+		String result = this.getTitle();
+		super.webDrv.navigate().back();
+		return result;
 	}
 }

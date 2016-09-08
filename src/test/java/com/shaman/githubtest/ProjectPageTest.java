@@ -1,26 +1,27 @@
 package com.shaman.githubtest;
 
-import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.PageFactory;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.AfterClass;
+//import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.shaman.githubtest.pages.HomePage;
-import com.shaman.githubtest.pages.LoginPage;
+//import com.shaman.githubtest.pages.HomePage;
+//import com.shaman.githubtest.pages.LoginPage;
 import com.shaman.githubtest.pages.ProjectPage;
 
 public class ProjectPageTest extends PageTest {
 	protected ProjectPage projectPage = null;
 	private final static String CLONEWNDTITLE = "Clone with SSH";
+	private final static String BRANCHES_PAGE_TITLE = "Branches · shaman2001/task_1";
 	
 	@BeforeClass
   	public void initPageObjects() {
-		this.projectPage = super.homePage.lnkMyProjectClick();
+		projectPage = super.homePage.lnkMyProjectClick();
 	}
 	
 	@Parameters({"project-name"})
@@ -48,7 +49,7 @@ public class ProjectPageTest extends PageTest {
 	public void contributorsLinkTest() {
 		Assert.assertTrue(projectPage.isExistLnkContributors());
 	}
-	/*@Test (description="Clone or dowload window header check", priority=1, enabled = true)
+	/*@Test (description="Clone or download window header check", priority=1, enabled = true)
 	public void cloneWndTitleTest() {
 		String titleAct = this.projectPage.getCloneWndTitle();
 		Assert.assertEquals(titleAct, CLONEWNDTITLE);
@@ -56,14 +57,17 @@ public class ProjectPageTest extends PageTest {
 	
 	@Test (description="Check is Readme label and Readme.md file content equals", priority=2, enabled = true)
 	public void readmelblTest() {
-		String lblReadme = this.projectPage.getLblReadmeContent();
+		String lblReadme = projectPage.getLblReadmeContent();
 		this.projectPage.lnkReadmeMDClick();
-		String textReadme = this.projectPage.getLblReadmeFileContent();
+		String textReadme = projectPage.getLblReadmeFileContent();
 		Assert.assertEquals(textReadme, lblReadme);
 		//System.out.println(textReadme);
 	}
-	
-	
+	@Test (description="Check BranchesPage title", enabled = true)
+	public void branchesPageTitleTest() {
+		String resultStr= projectPage.getBranchesPageTitle();
+		Assert.assertEquals(resultStr, BRANCHES_PAGE_TITLE);
+	}
 	
 	
 	

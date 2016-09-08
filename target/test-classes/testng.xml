@@ -13,5 +13,17 @@
       <class name="com.shaman.githubtest.ProjSettingsPageTest"/>
     </classes>
   </test> 
-
+  <test name="ProfilePageTest">
+  <parameter name = "project-name" value = "task1"></parameter>
+    <classes>
+      <class name="com.shaman.githubtest.ProfilePageTest"/>
+    </classes>
+  </test> 
+  <test name="HomePageTest">
+  <parameter name = "project-name" value = "task1"></parameter>
+    <classes>
+      <class name="com.shaman.githubtest.HomePageTest"/>
+    </classes>
+  </test> 
+  
 </suite>

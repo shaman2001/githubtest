@@ -1,21 +1,21 @@
 package com.shaman.githubtest;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+//import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.Optional;
+//import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.shaman.githubtest.pages.HomePage;
-import com.shaman.githubtest.pages.LoginPage;
+//import com.shaman.githubtest.pages.HomePage;
+//import com.shaman.githubtest.pages.LoginPage;
 import com.shaman.githubtest.pages.ProjSettingsPage;
-import com.shaman.githubtest.pages.ProjectPage;
+//import com.shaman.githubtest.pages.ProjectPage;
 
 public class ProjSettingsPageTest extends PageTest {
 	//protected ProjectPage projectPage = null;

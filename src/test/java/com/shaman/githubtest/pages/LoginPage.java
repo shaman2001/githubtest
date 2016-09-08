@@ -1,8 +1,8 @@
 package com.shaman.githubtest.pages;
 
 
-import ru.stqa.selenium.factory.WebDriverFactory;
-import ru.stqa.selenium.factory.WebDriverFactoryMode;
+//import ru.stqa.selenium.factory.WebDriverFactory;
+//import ru.stqa.selenium.factory.WebDriverFactoryMode;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
