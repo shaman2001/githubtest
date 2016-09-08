@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [GithubTests]">
+  <parameter name="project-name" value="task1"/>
+  <test name="Test1">
+    <parameter name="project-name" value="task1"/>
+    <classes>
+      <class name="com.shaman.githubtest.ProjectPageTest"/>
+      <class name="com.shaman.githubtest.ProjSettingsPageTest"/>
+    </classes>
+  </test> <!-- Test1 -->
+  <test name="Test1(failed)">
+    <parameter name="project-name" value="task1"/>
+    <classes>
+      <class name="com.shaman.githubtest.ProjectPageTest">
+        <methods>
+          <include name="initPageObjects"/>
+          <include name="HomePageBack"/>
+          <include name="initTestSuite"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.shaman.githubtest.ProjectPageTest -->
+      <class name="com.shaman.githubtest.ProjSettingsPageTest">
+        <methods>
+          <include name="CommitsLinkTest"/>
+          <include name="initPageObjects"/>
+        </methods>
+      </class> <!-- com.shaman.githubtest.ProjSettingsPageTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [GithubTests] -->

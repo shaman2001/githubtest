@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="33748" started-at="2016-09-08T10:53:58Z" finished-at="2016-09-08T10:54:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="33748" started-at="2016-09-08T10:53:58Z" finished-at="2016-09-08T10:54:32Z">
+      <class name="com.shaman.githubtest.ProjectPageTest">
+        <test-method status="PASS" signature="initTestSuite()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="initTestSuite" is-config="true" duration-ms="27058" started-at="2016-09-08T13:53:59Z" finished-at="2016-09-08T13:54:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTestSuite -->
+        <test-method status="PASS" signature="initPageObjects()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="initPageObjects" is-config="true" duration-ms="2256" started-at="2016-09-08T13:54:26Z" finished-at="2016-09-08T13:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initPageObjects -->
+        <test-method status="PASS" signature="branchesLinkTest()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="branchesLinkTest" duration-ms="403" started-at="2016-09-08T13:54:28Z" description="Branches link availability" finished-at="2016-09-08T13:54:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- branchesLinkTest -->
+        <test-method status="PASS" signature="commitsLinkTest()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="commitsLinkTest" duration-ms="6" started-at="2016-09-08T13:54:29Z" description="Commits link availability" finished-at="2016-09-08T13:54:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- commitsLinkTest -->
+        <test-method status="PASS" signature="contributorsLinkTest()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="contributorsLinkTest" duration-ms="5" started-at="2016-09-08T13:54:29Z" description="Contributors link availability" finished-at="2016-09-08T13:54:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contributorsLinkTest -->
+        <test-method status="PASS" signature="releasesLinkTest()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="releasesLinkTest" duration-ms="3" started-at="2016-09-08T13:54:29Z" description="Releases link availability" finished-at="2016-09-08T13:54:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- releasesLinkTest -->
+        <test-method status="PASS" signature="titleProjectTest(java.lang.String)[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="titleProjectTest" duration-ms="23" started-at="2016-09-08T13:54:29Z" description="Title string of project page" finished-at="2016-09-08T13:54:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[task1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleProjectTest -->
+        <test-method status="PASS" signature="readmelblTest()[pri:2, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="readmelblTest" duration-ms="1588" started-at="2016-09-08T13:54:29Z" description="Check is Readme label and Readme.md file content equals" finished-at="2016-09-08T13:54:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readmelblTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.shaman.githubtest.ProjectPageTest@204f30ec]" name="tearDown" is-config="true" duration-ms="1994" started-at="2016-09-08T13:54:30Z" finished-at="2016-09-08T13:54:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shaman.githubtest.ProjectPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
