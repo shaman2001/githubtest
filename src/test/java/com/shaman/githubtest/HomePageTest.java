@@ -26,16 +26,19 @@ public class HomePageTest extends PageTest {
 	
 	@Test (description="Check ownwer in the new repository page",enabled = true)
 	public void commitsLinkTest() {
+		logger.info("Start test CommitsLinkTest");
 		Assert.assertEquals(super.homePage.getOwnerFromNewRepPage(),OWNER);
 	}
 	
 	@Test (description="Check button-links in repo-filter box",enabled = true)
 	public void btnLinkRepoFTest() {
+		logger.info("Start test BtnLinkRepoFTest");
 		Assert.assertTrue(super.homePage.isExistsBtnsRFltr());
 	}
 	
 	@Test (description="Check search results page title",enabled = true)
 	public void searchResPageTest() {
+		logger.info("Start test SearchResPageTest");
 		Assert.assertTrue(super.homePage.getSearchPageTitle().contains(OWNER));
 	}
 	

@@ -6,7 +6,7 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <properties>
-  	<browser.name>chrome</browser.name>
+  	
   	<webdriver.chrome.driver>c:\selenium\chromedriver.exe</webdriver.chrome.driver>
   	<java.version>1.8</java.version>
   	<maven.compiler.version>3.5.1</maven.compiler.version>
@@ -16,6 +16,8 @@
     <testng.version>6.9.10</testng.version>
     <chromedriver.version>2.23.1</chromedriver.version>
     <webdriver.factory.version>2.1</webdriver.factory.version>
+    <log4j.version>1.2.17</log4j.version>
+    <log4j.core.version>2.6.2</log4j.core.version>
   </properties>
   <dependencies>
     <dependency>
@@ -58,14 +60,13 @@
       <artifactId>chromedriver</artifactId>
       <version>${chromedriver.version}</version>
     </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
   </dependencies>
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
     <testResources>
       <testResource>
         <directory>src/test/resources</directory>
@@ -107,14 +108,4 @@
       </plugin>
     </plugins>
   </build>
-  <!-- profiles -->
-  <profiles>
-    <!-- browsers -->
-    <profile>
-      <id>chrome</id>
-      <properties>
-        <capabilities>/chrome.capabilities</capabilities>
-      </properties>
-    </profile>
-  </profiles>
 </project>
