@@ -2,12 +2,10 @@ package com.shaman.githubtest.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.List;
 
 
 public class HomePage extends Page {
@@ -51,6 +49,12 @@ public class HomePage extends Page {
 	
 	@FindBy(xpath = ".//input[@name ='q']")
 	private WebElement fSearch;
+
+	@FindBy(xpath = ".//div[@id='your_repos']/h3/span[@class='counter']")
+	private WebElement lblNumRepos;
+
+    @FindBy(xpath = ".//ul[@id='repo_listing']/li[@class='public source']")
+    private List<WebElement> listRepos;
 	
 	@FindBy(how = How.TAG_NAME, using = "h1")
 	@CacheLookup
@@ -109,5 +113,15 @@ public class HomePage extends Page {
 		super.webDrv.navigate().back();
 		return result;
 	}
+
+	public Integer getRepoQtyFromCounter() {
+		return Integer.parseInt(lblNumRepos.getText());
+	}
+
+    public Integer getRepoQtyFromList() {
+        return listRepos.size();
+    }
+
+
 
 }

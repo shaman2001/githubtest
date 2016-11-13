@@ -1,28 +1,13 @@
 package com.shaman.githubtest;
 
-//import org.openqa.selenium.support.PageFactory;
 
 import org.testng.Assert;
-//import org.testng.annotations.BeforeClass;
-//import org.testng.annotations.AfterClass;
-//import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.Optional;
-//import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-//import com.shaman.githubtest.pages.HomePage;
-//import com.shaman.githubtest.pages.LoginPage;
-//import com.shaman.githubtest.pages.ProfilePage;
-//import com.shaman.githubtest.pages.ProjectPage;
+
 
 public class HomePageTest extends PageTest {
 	private final static String OWNER = "shaman2001";
-	
-	/*@BeforeClass
-  	public void initPageObjects() {
-		
-	}*/
-	
 	
 	@Test (description="Check ownwer in the new repository page",enabled = true)
 	public void commitsLinkTest() {
@@ -41,7 +26,16 @@ public class HomePageTest extends PageTest {
 		logger.info("Start test SearchResPageTest");
 		Assert.assertTrue(super.homePage.getSearchPageTitle().contains(OWNER));
 	}
-	
+
+	@Test (description="Check repositories quantity",enabled = true)
+	public void repoQtyTest() {
+		logger.info("Start test repoQtyTest");
+		Integer qtyFromList = super.homePage.getRepoQtyFromList() ;
+		Integer qtyFromCounter = super.homePage.getRepoQtyFromCounter();
+		logger.info("Quantity of repositories on counter = " + qtyFromList);
+		logger.info("Quantity of repositories in list = " + qtyFromCounter);
+		Assert.assertEquals(qtyFromList, qtyFromCounter);
+	}
 	
 	
 }

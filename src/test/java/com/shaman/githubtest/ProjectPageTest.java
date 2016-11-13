@@ -11,7 +11,7 @@ import com.shaman.githubtest.pages.ProjectPage;
 
 public class ProjectPageTest extends PageTest {
 	protected ProjectPage projectPage = null;
-	//private final static String CLONEWNDTITLE = "Clone with SSH";
+	private final static String CLONEWNDTITLE = "Clone with SSH";
 	private final static String BRANCHES_PAGE_TITLE = "Branches · shaman2001/task_1";
 	
 	@BeforeClass
@@ -47,11 +47,11 @@ public class ProjectPageTest extends PageTest {
 		logger.info("Start test ContributorsLinkTest");
 		Assert.assertTrue(projectPage.isExistLnkContributors());
 	}
-	/*@Test (description="Clone or download window header check", priority=1, enabled = true)
+	@Test (description="Clone or download window header check", /*priority=1,*/ enabled = true)
 	public void cloneWndTitleTest() {
 		String titleAct = this.projectPage.getCloneWndTitle();
 		Assert.assertEquals(titleAct, CLONEWNDTITLE);
-	}*/
+	}
 	
 	@Test (description="Check is Readme label and Readme.md file content equals", priority=2, enabled = true)
 	public void readmelblTest() {

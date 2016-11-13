@@ -2,6 +2,7 @@ package com.shaman.githubtest.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -39,8 +40,11 @@ public class ProjectPage extends Page {
 	@FindBy(xpath = ".//span[text()='Clone or download']")
 	private WebElement btnClone;
 	
-	@FindBy(xpath = ".//h4[@class='mb-1'][2]")
+	@FindBy(xpath = ".//div[@class='clone-options ssh-clone-options']/h4[@class='mb-1']")
 	private WebElement lblCloneMenuWnd;
+
+	@FindBy(xpath =".//span[@class='repository-meta-content']")
+	private WebElement lblRepoMetaContent;
 
 	@FindBy(how = How.TAG_NAME, using = "h1")
 	@CacheLookup
@@ -86,9 +90,10 @@ public class ProjectPage extends Page {
 	
 	public String getCloneWndTitle() {
 		btnClone.click();
-		
 		String str = this.lblCloneMenuWnd.getText();
 		//lblReadmeContent.click();
+		//new Actions(this.webDrv).moveToElement(lblRepoMetaContent).build().perform();
+		new Actions(this.webDrv).moveByOffset(-200,-200).click().build().perform();
 		return str;
 	}
 	
